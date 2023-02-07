@@ -1,0 +1,23 @@
+.chat-input {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    background-color: #343441;
+
+    &__wrap {
+        input {
+            height: 40px;
+        }
+
+        .ant-input-group-addon {
+            button {
+                height: 50px;
+                width: 80px;
+            }
+        }
+    }
+}
