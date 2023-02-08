@@ -1,1 +1,2 @@
-## A ChatGPT AI App Client.
+## A ChatGPT AI App.
+
