@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react"
-import { Input } from 'antd';
+import { Input, message } from 'antd';
 
 import './index.scss'
 
@@ -19,8 +19,13 @@ const ChatInput: FC<Props> = (props) => {
     const { getSearchVal } = props
 
     const [searchVal, setSearchVal] = useState('')
+    const [messageApi, contextHolder] = message.useMessage();
 
     const onSearch = (text: string) => {
+        if (!text) {
+            messageApi.warning('请输入内容');
+            return
+        }
         getSearchVal(text)
         setSearchVal('')
     }
@@ -32,6 +37,7 @@ const ChatInput: FC<Props> = (props) => {
 
     return (
         <div className="chat-input">
+            {contextHolder}
             <Search
                 value={searchVal}
                 placeholder="input search text"

@@ -50,7 +50,6 @@ const Home: FC<Props> = (props) => {
         <div className="home__val-item__val">{item}</div>
       </div>
       <div className="home__val-item__answer">
-        {/* <RobotOutlined className="home__val-item__answer__avatar"/> */}
         <div className="home__val-item__answer__avatar">
           <svg
             data-name="OpenAI Logo"
